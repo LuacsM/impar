@@ -1,0 +1,89 @@
+body{
+   background: #181818;
+}
+
+#visor {
+   padding-right: 5px;
+   text-align: center;
+}
+
+h1, h2, p, input{
+	font-family: 'Baloo Bhai', cursive;
+}
+
+table {
+   margin: 0 auto 0 auto;
+
+   margin-top: 50px;
+}
+
+input {
+   width: 100%;
+   border: solid #ccc 1px;
+   font-size: 24px;
+   margin-bottom: 10px;
+   border-radius: 10px;
+   background: #181818;
+   color: #ccc;
+}
+
+h1{
+   color: #ccc;
+}
+
+tr{
+   text-align: center;
+}
+
+input.num { 
+   width: 48px;
+   height: 48px;
+   cursor: pointer;
+}
+
+input.btn { 
+   width: 48px;
+   height: 48px;
+   cursor: pointer;
+   font-size: 16px;
+}
+
+
+
+.msg{
+  z-index: 3000;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: -8px;
+}
+
+
+
+.msg_1{
+  width: 300px;
+  height: 300px;
+  background-color: #181818;
+  opacity: 1;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  color: #ccc;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+  }
+
+

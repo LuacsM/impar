@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head>
+
+   <title>Impar ou Par?</title>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <link href="css/estilo.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+   <script type="text/javascript" src="js/mecanismo.js"></script>
+   
+   <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+
+ <div class="msg">
+  <div class="msg_1">
+    <div class="close">+</div>
+    <form>
+        <h1>Impar ou Par?</h1>
+		<h2>Trabalho desenvolvido por Lucas Maia e Cristian Aragão para obtenção de nota parcial do 4º bimestre.</h2>
+    </form>
+  </div>
+</div>
+
+<form name="calcform" method="post" action="" id="formulario">
+      <table id="calc">
+         <tr>
+            <td colspan="3"> <div class="recebeAnimacao"><h1 id="paragrafo">O Número é ____</h1></div></td>
+         </tr>
+         <tr>
+            <td colspan="3"><input type="text" name="visor" id="visor" /></td>
+         </tr>
+         <tr>
+            <td><input type="button" name="num9" class="num" value="9" onclick="addNum(9)" onmousedown="bleep.play()" /></td>
+            <td><input type="button" name="num8" class="num" value="8" onclick="addNum(8)" onmousedown="bleep.play()"/></td>
+            <td><input type="button" name="num7" class="num" value="7" onclick="addNum(7)" onmousedown="bleep.play()"/></td>
+           
+         </tr>
+         <tr>
+            <td><input type="button" name="num6" class="num" value="6" onclick="addNum(6)" onmousedown="bleep.play()"/></td>
+            <td><input type="button" name="num5" class="num" value="5" onclick="addNum(5)" onmousedown="bleep.play()"/></td>
+            <td><input type="button" name="num4" class="num" value="4" onclick="addNum(4)" onmousedown="bleep.play()"/></td>
+           
+         </tr>
+         <tr>
+            <td><input type="button" name="num3" class="num" value="3" onclick="addNum(3)" onmousedown="bleep.play()"/></td>
+            <td><input type="button" name="num2" class="num" value="2" onclick="addNum(2)" onmousedown="bleep.play()"/></td>
+            <td><input type="button" name="num1" class="num" value="1" onclick="addNum(1)" onmousedown="bleep.play()"/></td>
+           
+         </tr>
+         <tr>
+            <td><input type="button" name="num0" class="num" value="0" onclick="addNum(0)" onmousedown="bleep.play()"/></td>
+            <td><input type="button" name="igual" class="btn" value="GO!" id="anima" onclick="resultado()" style="background-color: #228B22" onmousedown="go.play()" /></td>
+            <td><input type="button" name="limpar" class="btn" value="DEL" onclick="Limpar()" style="background-color: #B22222" onmousedown="del.play()"/></td>
+            
+         </tr>
+      </table> 
+</form>
+
+
+<script type="text/javascript" >
+  var bleep = new Audio();
+  var go = new Audio();
+  var del = new Audio();
+
+  bleep.src = 'audio/audio4.wav';
+  go.src = 'audio/go.mp3';
+  del.src = 'audio/audio.wav';
+
+  document.querySelector('.close').addEventListener("click", function() {
+    document.querySelector('.msg').style.display = "none";
+  });
+
+</script>
+
+</body>
+</html>
