@@ -1,4 +1,3 @@
-
 // Função que adiciona os números
 function addNum(num) {
    document.calcform.visor.value = document.calcform.visor.value + num;
@@ -10,7 +9,7 @@ function Limpar() {
    document.getElementById("paragrafo").innerHTML = "O Número é ____";
 }
 
-function myEndFunction(){
+function tira(){
   var div = document.querySelector(".recebeAnimacao");
   div.classList.remove("animated", "heartBeat");
 }
@@ -32,12 +31,5 @@ function resultado(){
       document.getElementById("paragrafo").innerHTML = "O Número é Impar";
     }
 
-    div.addEventListener("animationend", myEndFunction);
-    
+    div.addEventListener("animationend", tira);
 }
-
-
-
-
-
-
