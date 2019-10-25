@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
 <head>
+  <meta charset="utf-8"/>
+  <title>Impar ou Par?</title>
 
-   <title>Impar ou Par?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-   <link href="css/estilo.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-   <script type="text/javascript" src="js/mecanismo.js"></script>
+  <link href="css/estilo.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <script type="text/javascript" src="js/mecanismo.js"></script>
    
-   <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet"> 
 
 </head>
 <body>
@@ -66,14 +66,26 @@
   var bleep = new Audio();
   var go = new Audio();
   var del = new Audio();
+  var pop = new Audio();
 
   bleep.src = 'audio/audio4.wav';
   go.src = 'audio/go.mp3';
   del.src = 'audio/audio.wav';
+  pop.src = 'audio/POP.mp3';
 
   document.querySelector('.close').addEventListener("click", function() {
-    document.querySelector('.msg').style.display = "none";
+    var div = document.querySelector(".msg_1");
+    div.classList.add("animated", "zoomOut");
+
+    document.querySelector('.msg').style.background = "rgb(0, 0, 0, 0)";
+    pop.play();
+    div.addEventListener("animationend", myEndFunction);
+
   });
+
+  function myEndFunction(){
+  document.querySelector('.msg').style.display = "none";
+}
 
 </script>
 
